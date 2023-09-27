@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{879C1E36-7B1D-4C5A-A705-82ED98C434F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Paying_Guest_Management_System</RootNamespace>
+    <AssemblyName>Paying Guest Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ApproveAndCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ApproveAndCheckout.Designer.cs">
+      <DependentUpon>ApproveAndCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BookinApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\BookinApprove.Designer.cs">
+      <DependentUpon>BookinApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CheckoutApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CheckoutApprove.Designer.cs">
+      <DependentUpon>CheckoutApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GuestReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GuestReview.Designer.cs">
+      <DependentUpon>GuestReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HostReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\HostReview.Designer.cs">
+      <DependentUpon>HostReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reviews_Section.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Reviews_Section.Designer.cs">
+      <DependentUpon>Reviews_Section.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\user\Guest_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\user\Guest_User.Designer.cs">
+      <DependentUpon>Guest_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\user\Host_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\user\Host_User.Designer.cs">
+      <DependentUpon>Host_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\user\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\user\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\GuestBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestBooking.Designer.cs">
+      <DependentUpon>GuestBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\guestReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\guestReview.Designer.cs">
+      <DependentUpon>guestReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\guest_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\guest_dashboard.Designer.cs">
+      <DependentUpon>guest_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\PasswordReset_Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\PasswordReset_Guest.Designer.cs">
+      <DependentUpon>PasswordReset_Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest_Registation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest_Registation.Designer.cs">
+      <DependentUpon>Guest_Registation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\AddPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\AddPost.Designer.cs">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\EditPassword.Designer.cs">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\EditPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\EditPost.Designer.cs">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\History_Host.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\History_Host.Designer.cs">
+      <DependentUpon>History_Host.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\HostReview_guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\HostReview_guest.Designer.cs">
+      <DependentUpon>HostReview_guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\host_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\host_dashboard.Designer.cs">
+      <DependentUpon>host_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\OtherPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\OtherPost.Designer.cs">
+      <DependentUpon>OtherPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host\Post.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host\Post.Designer.cs">
+      <DependentUpon>Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Host_Regestation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Host_Regestation.Designer.cs">
+      <DependentUpon>Host_Regestation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paying_GuestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paying_GuestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ApproveAndCheckout.resx">
+      <DependentUpon>ApproveAndCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\BookinApprove.resx">
+      <DependentUpon>BookinApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CheckoutApprove.resx">
+      <DependentUpon>CheckoutApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GuestReview.resx">
+      <DependentUpon>GuestReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\HostReview.resx">
+      <DependentUpon>HostReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reviews_Section.resx">
+      <DependentUpon>Reviews_Section.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\user\Guest_User.resx">
+      <DependentUpon>Guest_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\user\Host_User.resx">
+      <DependentUpon>Host_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\user\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\GuestBooking.resx">
+      <DependentUpon>GuestBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\guestReview.resx">
+      <DependentUpon>guestReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\guest_dashboard.resx">
+      <DependentUpon>guest_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\PasswordReset_Guest.resx">
+      <DependentUpon>PasswordReset_Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest_Registation.resx">
+      <DependentUpon>Guest_Registation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\AddPost.resx">
+      <DependentUpon>AddPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\EditPassword.resx">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\EditPost.resx">
+      <DependentUpon>EditPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\History_Host.resx">
+      <DependentUpon>History_Host.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\HostReview_guest.resx">
+      <DependentUpon>HostReview_guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\host_dashboard.resx">
+      <DependentUpon>host_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\OtherPost.resx">
+      <DependentUpon>OtherPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host\Post.resx">
+      <DependentUpon>Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Host_Regestation.resx">
+      <DependentUpon>Host_Regestation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aa-DJ.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aa.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Paying_GuestDataSet.xsc">
+      <DependentUpon>Paying_GuestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Paying_GuestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Paying_GuestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Paying_GuestDataSet.xss">
+      <DependentUpon>Paying_GuestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
